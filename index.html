@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        .row{
+            display: flex;
+        }
+
+        .cell{
+            display: flex;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            margin: 10px;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-family: monospace;
+        }
+
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .button{
+            background: none;
+            border: 2px solid black;
+            width: 150px;
+            height: 40px;
+            padding: 10px 50px;
+            margin: 50px;
+            box-shadow: 0 0 10px #bbb;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="area" id="area">
+        <div class="row" id="row">
+            <div class="cell" id="cell1"></div>
+            <div class="cell" id="cell2"></div>
+            <div class="cell" id="cell3"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="cell4"></div>
+            <div class="cell" id="cell5"></div>
+            <div class="cell" id="cell6"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="cell7"></div>
+            <div class="cell" id="cell8"></div>
+            <div class="cell" id="cell9"></div>
+        </div>
+
+        
+    </div>
+    <button id="button" class="button">Оновити</button>
+    <script>
+        let sign = 'x';
+        let click = 0;
+
+        function changeSign(){
+            click++
+            if(click % 2 == 0){
+                sign = 'o';
+            } else {
+                sign = 'x';
+            }
+        }
+        
+        changeSign()
+
+        cell1.onclick = function(){
+            cell1.innerText = sign;
+            changeSign()
+        }
+        
+        cell2.onclick = function(){
+            cell2.innerText = sign;
+            changeSign()
+        }
+
+        cell3.onclick = function(){
+            cell3.innerText = sign;
+            changeSign()
+        }
+
+        cell4.onclick = function(){
+            cell4.innerText = sign;
+            changeSign()
+        }
+
+        cell5.onclick = function(){
+            cell5.innerText = sign;
+            changeSign()
+        }
+
+        cell6.onclick = function(){
+            cell6.innerText = sign;
+            changeSign()
+        }
+
+        cell7.onclick = function(){
+            cell7.innerText = sign;
+            changeSign()
+        }
+
+        cell8.onclick = function(){
+            cell8.innerText = sign;
+            changeSign()
+        }
+
+        cell9.onclick = function(){
+            cell9.innerText = sign;
+            changeSign()
+        }
+
+        button.onclick = function(){
+            cell1.innerText = '';
+            cell2.innerText = '';
+            cell3.innerText = '';
+            cell4.innerText = '';
+            cell5.innerText = '';
+            cell6.innerText = '';
+            cell7.innerText = '';
+            cell8.innerText = '';
+            cell9.innerText = '';
+        }
+    </script>
+</body>
+</html>
